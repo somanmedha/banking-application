@@ -9,6 +9,7 @@ import com.med.banking.entity.Transaction;
 import com.med.banking.exception.AccountException;
 import com.med.banking.repository.AccountRepository;
 import com.med.banking.repository.TransactionRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
@@ -32,9 +33,17 @@ class AccountServiceImplTest {
     @InjectMocks
     private AccountServiceImpl accountService;
 
+
+    private MockitoSession mockitoSession;
+
     @BeforeEach
     void setUp() {
-        MockitoSession mockitoSession = Mockito.mockitoSession().initMocks(this).startMocking();
+       mockitoSession = Mockito.mockitoSession().initMocks(this).startMocking();
+    }
+
+    @AfterEach
+    void tearDown() {
+        mockitoSession.finishMocking();
     }
 
     // 1.  Test Case for the method: AccountDTO createAccount(AccountDTO accountDto)
