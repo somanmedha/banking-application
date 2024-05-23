@@ -61,7 +61,17 @@ Security has not been implemented in this project for the REST APIs. The focus i
 ####  6.6 Delete Account: DELETE /api/accounts/delete/{id}
 ####  6.7 Transfer Funds: POST /api/accounts/transfer
 ####  6.8 Get Account Transactions: GET /api/accounts/{accountId}/transactions
+
+## 7. Testing
+
+The application includes unit and integration tests to ensure functionality and reliability.
+### Tests can be run using:
+```mvn test```
+ ##### The Banking Application project boasts comprehensive test coverage:
+- **Controller Layer:** 100% coverage.
+- **Service Layer:** 100% coverage.
+- **Overall Coverage:** 91% in methods, 90% in lines.
    
-   ## 7. Contributing
+   ## 8. Contributing
    
    Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
